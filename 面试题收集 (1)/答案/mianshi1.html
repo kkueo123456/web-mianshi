@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a = [2, [3,4] ,5, 6, 7, [8], 9, 10];
+        let b = [8,7];
+        function fn(a,b){
+        let temp=true;
+         for(let i=0;i<a.length;i++){
+            //  console.log(a[i])
+           if(a[i] instanceof Array){
+            //    console.log(a[i])
+                if(a[i].toString()==b.toString()){
+                    console.log(i)
+                    temp=false;
+                    return false;
+                }
+            }
+         }
+         if(temp==true){
+             console.log(-1)     
+         }
+        }
+        fn(a,b)
+    </script>
+</body>
+</html>
